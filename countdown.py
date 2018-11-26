@@ -1,6 +1,7 @@
 #########################################################################
-# Author : Mattia Pedroncelli                                           #
-# 26/11/2018                                                            # 
+# ✓ Author: Mattia Pedroncelli© mattia.pedroncelli@gmail.com            # 
+# - Date: 26/11/2018                                                    #
+#                                                                       # 
 # CALCOLO ORE, MINUTI, SECONDI MANCANTI ALLA FINE GIORNATA LAVORATIVA   #
 #########################################################################
 

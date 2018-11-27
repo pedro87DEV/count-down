@@ -40,7 +40,7 @@ differenza_secondi = somma_secondi_fine - somma_secondi_attuali
 if differenza_secondi < 0:
 
     print "---------------------------------------------------------------------------"
-    print "ATTENZIONE !!!!!!!!"
+    print "ATTENZIONE !!!! CALCOLO COUNT-DOWN IMPOSSIBILE"
     print "                 "
     print "L'orario attuale e' successivo all'orario impostato per il count-down !!! "
     print "Orario impostato :",ora_fine,":",minuti_fine,":",secondi_fine,""

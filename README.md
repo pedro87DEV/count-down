@@ -6,7 +6,7 @@ Lo script mostra a video il timing rimanente (ORE, MINUTI, SECONDI) dall'orario 
 
 >Valorizzare le costanti iniziali nello script con l'orario a cui si vuol far riferimento per il calcolo del count-down.
 >
->- ora_fine = 17
->- minuti_fine = 00 
->- secondi_fine = 59 
+>- ora_fine = 'HH'
+>- minuti_fine = 'MM' 
+>- secondi_fine = 'SS' 
 

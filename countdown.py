@@ -1,13 +1,13 @@
 #########################################################################
-# ✓ Author: Mattia Pedroncelli© mattia.pedroncelli@gmail.com            # 
+# ✓ Author: Mattia Pedroncelli©  mattia.pedroncelli@gmail.com           # 
 # - Date: 26/11/2018                                                    #
-#                                                                       # 
-# CALCOLO ORE, MINUTI, SECONDI MANCANTI ALLA FINE GIORNATA LAVORATIVA   #
+# - Linguaggio : Python                                                 # 
+# CALCOLO ORE, MINUTI, SECONDI MANCANTI AD UN DETERMINATO ORARIO        #
 #########################################################################
 
 import time
 
-# IMPOSTAZIONE INIZIALE COSTANTI (ORA FINE GIORNATA LAVORATIVA)
+# IMPOSTAZIONE INIZIALE COSTANTI (ORARIO CALCOLO COUNT-DOWN)
 ora_fine = 17
 minuti_fine = 00 
 secondi_fine = 59 
@@ -34,9 +34,9 @@ differenza_secondi = somma_secondi_fine - somma_secondi_attuali
 if differenza_secondi < 0:
 
     print "                 "
-    print "MALANDRINO NON FARE IL FURBO !!!!!!!!"
-    print "La tua giornata di lavoro e' gia' finita...spegni il pc e fila!!! "
-    print "----------------------------------------------------------------"
+    print "ATTENZIONE !!!!!!!!"
+    print "L'orario attuale e' successivo all'orario impostato per il count-down !!! "
+    print "--------------------------------------------------------------------------"
     exit()
 
 # ***** PRIMA ELABORAZIONE FUORI CICLO *******************************************************
@@ -66,19 +66,19 @@ while differenza_secondi > 0:
    differenza_secondi = somma_secondi_fine - somma_secondi_attuali
  
    print "                 "
-   print " TIENI DURO !!!                    **************"
-   print "                                   * Count-down *"
-   print "                                   **************"
-   print " Alla fine mancano solo : ",ore_mancanti,"Ore -",minuti_mancanti,"Minuti -",secondi_mancanti,"Secondi"
+   print " Alle",ora_fine,":",minuti_fine":",secondi_fine"         **************"
+   print "                                                         * Count-down *"
+   print "                                                         **************"
+   print " Mancano solo : ",ore_mancanti,"Ore -",minuti_mancanti,"Minuti -",secondi_mancanti,"Secondi"
    print " "
-   print "----------------------------------------------------------------"
+   print "--------------------------------------------------------------------------"
    time.sleep(1)
 
 
 while 1>0:
    print "                 "
-   print "E' FINITAAAAAAAAAAAAAAAAAA TUTTI A CASAAAAAAAAAAAAAA !!!!!!!!"
-   print "Spegni il pc e fila"
-   print "----------------------------------------------------------------"
+   print "E' FINITAAAAAAAAAAAAAAAAAA !!!!!!!!"
+   print "Count-down terminato               "
+   print "--------------------------------------------------------------------------"
    time.sleep(1)
  

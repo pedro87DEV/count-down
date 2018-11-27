@@ -1,21 +1,23 @@
 #########################################################################
-# - Author: Mattia Pedroncelli  mattia.pedroncelli@gmail.com            # 
+# - Author: Mattia Pedroncelli (mattia.pedroncelli@gmail.com)           # 
 # - Date  : 26/11/2018                                                  #
-# - Linguaggio : Python                                                 # 
+# - Linguaggio : Python                                                 #
+# _____________________________________________________________________ # 
 # CALCOLO ORE, MINUTI, SECONDI MANCANTI AD UN DETERMINATO ORARIO        #
 #########################################################################
 
 import time
 
 # IMPOSTAZIONE INIZIALE COSTANTI (ORARIO CALCOLO COUNT-DOWN)
-ora_fine = 12
-minuti_fine = 15 
-secondi_fine = 50 
+ora_fine = '16'
+minuti_fine = '00' 
+secondi_fine = '00'  
 
-  
-# ***** PRIMA ELABORAZIONE FUORI CICLO *******************************************************
+# *********************************************************************************************** 
+# ***** INIZIO PRIMA ELABORAZIONE FUORI CICLO ***************************************************
+# ***********************************************************************************************
 
-somma_secondi_fine = (ora_fine*3600)+minuti_fine*60+secondi_fine
+somma_secondi_fine = (int(ora_fine)*3600)+(int(minuti_fine)*60)+int(secondi_fine)
  
 ora_corrente=time.strftime("%H")
 minuti_correnti=time.strftime("%M")
@@ -27,24 +29,26 @@ time_strings = time.strftime("%H,%M,%S")
 t = time_strings.split(',')
 time_int = [ int(x) for x in t ]
 
-# CALCOLO ORE, MINUTI, SECONDI MANCANTI
+# CALCOLO ORE, MINUTI, SECONDI MANCANTI PER PRIMA VERIFICA
 somma_secondi_attuali = (time_int[0]*3600)+(time_int[1]*60)+time_int[2]
 differenza_secondi = somma_secondi_fine - somma_secondi_attuali
 
 if differenza_secondi < 0:
 
-    print "------------------------------------------------------------------------------"
+    print "---------------------------------------------------------------------------"
     print "ATTENZIONE !!!!!!!!"
     print "                 "
     print "L'orario attuale e' successivo all'orario impostato per il count-down !!! "
     print "Orario impostato :",ora_fine,":",minuti_fine,":",secondi_fine,""
     print "Orario attuale   :",ora_corrente,":",minuti_correnti,":",secondi_correnti,""
-    print "------------------------------------------------------------------------------"
+    print "---------------------------------------------------------------------------"
     exit()
+# ***********************************************************************************************
+# ***** FINE PRIMA ELABORAZIONE FUORI CICLO *****************************************************
+# ***********************************************************************************************
 
-# ***** PRIMA ELABORAZIONE FUORI CICLO *******************************************************
 
- 
+   
 # CICLO ELABORATIVO PRINCIPALE
  
 while differenza_secondi > 0:
@@ -60,8 +64,9 @@ while differenza_secondi > 0:
    t = time_strings.split(',')
    time_int = [ int(x) for x in t ]
 
-
-   # CALCOLO ORE, MINUTI, SECONDI MANCANTI -------------
+   # ********************************************************************************************
+   # INIZIO CALCOLO ORE, MINUTI, SECONDI MANCANTI ***********************************************
+   # ********************************************************************************************
 
    somma_secondi_attuali = (time_int[0]*3600)+(time_int[1]*60)+time_int[2]
    differenza_secondi = somma_secondi_fine - somma_secondi_attuali
@@ -77,21 +82,21 @@ while differenza_secondi > 0:
       secondi_mancanti = differenza_secondi - (minuti_mancanti*60)
       
    else:
-
-      
-
-   # ---------------------------------------------------
-
+      ore_mancanti = int(differenza_secondi/3600)  
+      minuti_mancanti = int((differenza_secondi - (ore_mancanti*3600))/60)
+      secondi_mancanti = differenza_secondi - (ore_mancanti*3600) - (minuti_mancanti*60)
+   # ********************************************************************************************
+   # FINE CALCOLO ORE, MINUTI, SECONDI MANCANTI *************************************************
+   # ********************************************************************************************
  
    print "                 "
-   print " Alle",ora_corrente,":",minuti_correnti,":",secondi_correnti,""
-   print " Alle",ora_fine,":",minuti_fine,":",secondi_fine,"" 
-   print "                                                         **************"
-   print "                                                         * Count-down *"
-   print "                                                         **************"
-   print " Mancano solo :                                ",ore_mancanti,"Ore -",minuti_mancanti,"Minuti -",secondi_mancanti,"Secondi"
-   print " "
-   print "------------------------------------------------------------------------------"
+   print "                                                   ",ora_corrente,":",minuti_correnti,":",secondi_correnti,""
+   print "                                                   **************"
+   print "                                                   * Count-down *"
+   print "                                        ************            ************"
+   print " Alle ore",ora_fine,":",minuti_fine,":",secondi_fine,"       mancano :   ",ore_mancanti,"Ore -",minuti_mancanti,"Minuti -",secondi_mancanti,"Secondi  "
+   print "                                        ************************************"
+   print "---------------------------------------------------------------------------"
    time.sleep(1)
 
 
@@ -99,6 +104,6 @@ while 1>0:
    print "                 "
    print "E' FINITAAAAAAAAAAAAAAAAAA !!!!!!!!"
    print "Count-down terminato               "
-   print "------------------------------------------------------------------------------"
+   print "---------------------------------------------------------------------------"
    time.sleep(1)
-
+ 

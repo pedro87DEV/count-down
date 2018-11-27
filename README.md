@@ -22,6 +22,6 @@ Lanciando lo script (eseguibile da shall Unix), verrà richiesto a video l'inser
 
 Nel caso venisse inserito un orario per il calcolo count-down antecedente l'orario attuale, lo script mostrerà un'eccezzione a video di segnalazione errore. 
 
-![eccezione](./images/eccezione_error.png)  
+![eccezione](./images/eccezione-error.png)  
  
  

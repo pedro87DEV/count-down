@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #########################################################################
 # - Author: Mattia Pedroncelli (mattia.pedroncelli@gmail.com)           # 
 # - Date  : 26/11/2018                                                  #
@@ -8,10 +9,13 @@
 
 import time
 
-# IMPOSTAZIONE INIZIALE COSTANTI (ORARIO CALCOLO COUNT-DOWN)
-ora_fine = '16'
-minuti_fine = '00' 
-secondi_fine = '00'  
+# IMPOSTAZIONE INIZIALE ORARIO PER CALCOLO COUNT-DOWN(IMPOSTAZIONE VALORI DA SHALL)
+
+print" "
+print "INSERIMENTO DELL'ORARIO PER CUI VUOI VENGA ESEGUITO IL COUNT-DOWN"
+ora_fine = raw_input("Inserisci l'ora (HH) : ")
+minuti_fine = raw_input("Inserisci i minuti (MM) : ")
+secondi_fine = raw_input("Inserisci i secondi (SS) : ") 
 
 # *********************************************************************************************** 
 # ***** INIZIO PRIMA ELABORAZIONE FUORI CICLO ***************************************************
@@ -106,4 +110,3 @@ while 1>0:
    print "Count-down terminato               "
    print "---------------------------------------------------------------------------"
    time.sleep(1)
- 

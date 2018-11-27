@@ -1,3 +1,5 @@
+✓ Author: Mattia Pedroncelli© - Date: 2018  mattia.pedroncelli@gmail.com
+![logo_project](./images/count-down.png)
 # COUNT DOWN
 ### Effettua il countdown delle ore, minuti, secondi mancanti ad un determinatao orario impostato
 

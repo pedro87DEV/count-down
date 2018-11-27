@@ -4,7 +4,7 @@
 ### Effettua il countdown delle ore, minuti, secondi mancanti ad un determinatao orario impostato
 
 
-Lo script mostra a video il timing rimanente (ORE, MINUTI, SECONDI) dall'orario attuale rispetto all'orario impostato per il calcolo del countdown.
+Lo script mostra a video il timing rimanente (ORE, MINUTI, SECONDI) dall'orario attuale rispetto all'orario impostato per il calcolo del countdown. 
 Script **countdown.py** eseguibile da shall Unix grazie alla prima riga nello script "#!/usr/bin/env python".   
 ![logo_project](./images/count-down.png)  
   

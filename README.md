@@ -8,9 +8,9 @@ Lanciando lo script (eseguibile da shall Unix), verrà richiesto a video l'inser
 
 **Orario in formato HH:MM:SS**
 
-> "INSERIMENTO DELL'ORARIO PER CUI VUOI VENGA ESEGUITO IL COUNT-DOWN" 
-> "Inserisci l'ora (HH) : " 
-> "Inserisci i minuti (MM) : " 
-> "Inserisci i secondi (SS) : " 
+> "INSERIMENTO DELL'ORARIO PER CUI VUOI VENGA ESEGUITO IL COUNT-DOWN"  
+> "Inserisci l'ora (HH) : "  
+> "Inserisci i minuti (MM) : "  
+> "Inserisci i secondi (SS) : "  
  
 Script **countdown.py** eseguibile da shall Unix grazie alla prima riga nello script "#!/usr/bin/env python" 
